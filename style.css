@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.nav {
+    background: #222;
+    height: 2.5rem;
+    display: grid;
+    place-items: center;
+}
+
+
+.nav a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #ff4000;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.nav a img {
+    width: 2rem;
+}
+
+.nav a span {
+    color: #56a3fc;
+    font-weight: 300;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    color: #fff;
+    background: linear-gradient(45deg, #000, #333);
+    position: relative;
+}
+
+.container {
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clock {
+    width: 100%;
+    height: 100%;
+    background-color: #00000079;
+    box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: #f41b79;
+    border-radius: 50% 50% 0 0;
+    left: -50px;
+    top: -50px;
+    filter: blur(50px);
+    z-index: -1;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: #56a3fc;
+    border-radius: 0 0 50% 50%;
+    right: -50px;
+    bottom: -50px;
+    filter: blur(50px);
+    z-index: -1;
+}
+
+.clock span {
+    font-size: 50px;
+    width: 60px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+.clock span::after {
+    font-size: 12px;
+    color: rgb(139, 139, 250);
+    letter-spacing: 1px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#hr::after {
+    content: 'HOURS';
+}
+
+#min::after {
+    content: 'MINUTES';
+}
+
+#sec::after {
+    content: 'SECONDS';
+}
+
+
+.footer {
+    padding: 0.5rem 0;
+    background: #222;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #fff;
+}
+
+
+/* responsive design*/
+@media screen and (max-width: 400px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        height: 120px;
+    }
+
+    .clock {
+        padding-inline: 1rem;
+    }
+    
+    .container::before {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .container::after {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .clock span {
+        font-size: 40px;
+        width: 50px;
+    }
+    
+}
