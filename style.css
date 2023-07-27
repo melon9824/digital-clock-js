@@ -13,6 +13,7 @@ body {
 }
 
 .nav {
+    min-height: 7vh;
     background: #222;
     height: 2.5rem;
     display: grid;
@@ -40,7 +41,7 @@ body {
 
 .hero {
     width: 100%;
-    min-height: 100vh;
+    min-height: 85vh;
     color: #fff;
     background: linear-gradient(45deg, #000, #333);
     position: relative;
@@ -125,11 +126,28 @@ body {
 
 
 .footer {
+    min-height: 7vh;
     padding: 0.5rem 0;
     background: #222;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer p {
     text-align: center;
     font-size: 0.75rem;
     color: #fff;
+}
+
+.footer p a {
+    color: #56a3fc;
+    transition: 0.3s;
+}
+
+.footer p a:hover {
+    color: #ff4000;
+    text-decoration: none;
 }
 
 
